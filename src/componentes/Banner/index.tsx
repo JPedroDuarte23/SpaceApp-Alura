@@ -2,7 +2,7 @@
 
     const BannerEstilizado = styled.div<StyledProps>`
         background-image: url(${props => props.$backgroundImage});
-        width: 1156px;
+        background-size: cover;
         height: 328px;
         border-radius: 20px;
         display: flex;

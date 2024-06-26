@@ -11,11 +11,16 @@ const HeaderEstilizado = styled.header`
     }
 `
 
-const Cabecalho = () => {
+interface Props {
+    filtro: string,
+    setFiltro: (filtro: string) => void
+}
+
+const Cabecalho = ({ filtro, setFiltro }: Props) => {
     return(
         <HeaderEstilizado>
             <img src="imagens/logo.png" alt=""/>
-            <CampoTexto />
+            <CampoTexto filtro={filtro} setFiltro={setFiltro}/>
         </HeaderEstilizado>
     )
 }

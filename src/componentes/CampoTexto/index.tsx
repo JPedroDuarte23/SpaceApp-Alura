@@ -27,10 +27,15 @@ const IconeLupa = styled.img`
     height: 38px;
 `
 
-const CampoTexto = () => {
+interface Props{
+    filtro: string,
+    setFiltro: (filtro: string) => void
+}
+
+const CampoTexto = ({ setFiltro }: Props) => {
     return (
         <ContainerEstilizado>
-            <InputEstilizado placeholder="O que você procura?"/>
+            <InputEstilizado placeholder="O que você procura?" onChange={(evento) => { setFiltro(evento.target.value) }}    />
             <IconeLupa src={lupa}/>
         </ContainerEstilizado>
 
